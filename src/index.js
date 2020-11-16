@@ -3,8 +3,7 @@ import {fetchMovies, fetchBooks} from "./services";
 const getBooksAndMovies = () => {
     return Promise.all([fetchBooks(), fetchMovies()])
         .then(([books, movies]) => ({
-            books,
-            movies
+            books, movies
         }))
         .catch(error => console.log("Error fetching books and movies", error));
 }
